@@ -36,7 +36,6 @@ colorscheme monokai
 "colorscheme vim-monokai-tasty
 
 set nu
-set background=light
 set cursorline
 
 set tabstop=4
@@ -49,6 +48,10 @@ set ai
 set nowrap
 set laststatus=2
 set noshowmode
+
+set hlsearch                                                                                                                                                                                  
+hi Search ctermbg=LightYellow                                                                                                                                                                 
+hi Search ctermfg=Black 
 
 hi Comment ctermfg=033
 
