@@ -1,6 +1,12 @@
 # LinuxSetting
 
 ## Issue of Conda Python Reading `.local` 
+**Better Solution**
+```sh
+conda env config vars set PYTHONUSERBASE="intentionally-disabled" --name <env_name>
+```
+
+**Old Solution**
 Locate the directory for the conda environment in your terminal window by running in the terminal echo `$CONDA_PREFIX`.
 
 Enter that directory and create these subdirectories and files:
