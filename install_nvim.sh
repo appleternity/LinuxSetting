@@ -12,7 +12,15 @@ cp monokai.vim ~/.config/nvim/colors/
 nvim +PluginInstall +qall
 
 # >> install to user
+#mkdir ~/.local
+#mkdir ~/.local/bin
+#cp nvim ~/.local/bin
+#echo 'alias vim=nvim' >> ~/.zshrc
+
+# >> if FUSE doesn't exist
+./nvim --appimage-extract
 mkdir ~/.local
 mkdir ~/.local/bin
-cp nvim ~/.local/bin
+mv squashfs-root ~/.local/nvim
+ln -s ~/.local/nvim/AppRun ~/.local/bin/nvim
 echo 'alias vim=nvim' >> ~/.zshrc
