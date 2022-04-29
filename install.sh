@@ -62,6 +62,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/supercrabtree/k.git $ZSH_CUSTOM/plugins/k
 git clone https://github.com/b4b4r07/enhancd.git $ZSH_CUSTOM/plugins/enhancd
 
-cat ./.zshrc > ~/.zshrc
+cat .zshrc >> ~/.zshrc
 
 chsh -s /usr/bin/zsh
