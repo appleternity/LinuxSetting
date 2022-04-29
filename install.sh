@@ -53,3 +53,16 @@ echo 'alias vim=nvim' >> ~/.zshrc
 # using "vivid" to manage colors (need rust)
 # cargo install vivid
 # echo 'export LS_COLORS="$(vivid generate molokai)"' >> ~/.zshrc
+
+#############
+# add zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/supercrabtree/k.git $ZSH_CUSTOM/plugins/k
+git clone https://github.com/b4b4r07/enhancd.git $ZSH_CUSTOM/plugins/enhancd
+
+echo "" >> ~/.zshrc
+echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
+echo "plugins+=(zsh-autosuggestions zsh-syntax-highlighting k enhancd)" >> ~/.zshrc
+echo "source $ZSH_CUSTOM/plugins/enhancd/init.sh" >> ~/.zshrc
