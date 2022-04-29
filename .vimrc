@@ -57,6 +57,8 @@ set noshowmode
 set hlsearch                                                                                                                                                                                  
 "hi Search ctermbg=LightYellow                                                                                                                                                                 
 "hi Search ctermfg=Black 
+hi Search ctermbg=134
+hi Search ctermfg=Black
 
 hi Comment ctermfg=033
 
@@ -129,12 +131,12 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+"nnoremap <C-Left> :tabprevious<CR>
+"nnoremap <C-Right> :tabnext<CR>
 
 " Go to last active tab
 au TabLeave * let g:lasttab = tabpagenr()
-nnoremap <silent> <C-Up> :exe "tabn ".g:lasttab<cr>
-vnoremap <silent> <C-Up> :exe "tabn ".g:lasttab<cr>
-nnoremap <silent> <C-Down> :exe "tabn ".g:lasttab<cr>
-vnoremap <silent> <C-Down> :exe "tabn ".g:lasttab<cr>
+nnoremap <silent> <C-Left> :exe "tabn ".g:lasttab<cr>
+vnoremap <silent> <C-Left> :exe "tabn ".g:lasttab<cr>
+nnoremap <silent> <C-Right> :exe "tabn ".g:lasttab<cr>
+vnoremap <silent> <C-Right> :exe "tabn ".g:lasttab<cr>
