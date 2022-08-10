@@ -36,3 +36,8 @@ echo "export EDITOR=vim" >> ~/.zshrc
 # using "vivid" to manage colors (need rust)
 # cargo install vivid
 # echo 'export LS_COLORS="$(vivid generate molokai)"' >> ~/.zshrc
+
+###########
+# set up ssh config
+mkdir ~/.ssh
+cp config ~/.ssh/config

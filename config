@@ -1,0 +1,17 @@
+Host ist
+    HostName ssh.ist.psu.edu
+    User czh5679
+
+Host crowdai
+    HostName lrs-khuang01.ist.psu.edu
+    User czh5679
+    ProxyJump ist
+
+Host dgx
+    HostName dgx1.ist.psu.edu 
+    User czh5679
+    ProxyJump ist
+
+Host crowdwriting
+    HostName crowdai.workisboring.com
+    User appleternity
